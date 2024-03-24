@@ -1,0 +1,88 @@
+body {
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+   background-image: url("achtergrondhart.jpeg");
+   background-color: #800000;
+   background-repeat: repeat;
+   background-size: cover; 
+    
+}
+
+/* link hart die beweegt https://nl.pinterest.com/pin/302304193757910234/ */
+/* link achtergrond hartjes https://i.pinimg.com/564x/80/fa/55/80fa55262045bc3ce4d558e0ae1b1be4.jpg */
+/* link animatie https://www.youtube.com/watch?v=wkmCQm29dWg */
+/* inspiratie https://www.youtube.com/watch?v=gkby8r-3soc */
+
+#content-box{
+  width: 400px;
+  height: 500px;
+  background-color: #FAF0E6;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  
+}
+
+#calculate {
+  width: 100px;
+  height: 50px;
+
+  background-color: #800000;
+  color:#FAF0E6;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+
+}
+
+#result-percentage {
+  font-size: 50px;
+}
+  
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+
+span{
+  position: absolute;
+  pointer-events: none;
+  filter: drop-shadow(0 0 15px rgba (0,0,0,0.5));
+  animation: fadeInOut 10s linear infinite;
+
+}
+
+@keyframes fadeInOut
+{
+  0%,100%
+  {opacity: 0;}
+  20%,80%
+  {opacity: 1;}
+}
+
+span::before{
+  content: '' ;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(hart.png);
+  background-size: cover;
+  animation: moveShape 1s linear infinite;
+
+}
+
+@keyframes moveShape
+{
+  0%
+  { 
+      transform: translate(0) rotate(0deg);
+  }
+100%
+  {  transform: translate(300px) rotate(360deg);}
+}
+
